@@ -1,20 +1,21 @@
 import Startup from "../Startup";
+import data from "../../data/startups.json";
 
 function List(props) {
-  const startups = [
-    {
-      name: "CourseIt",
-      description: "Esto es CourseIt"
-    },
-    {
-      name: "Endava",
-      description: "This is endava"
-    }
-  ];
+  // const startups = [
+  //   {
+  //     name: "CourseIt",
+  //     description: "Esto es CourseIt"
+  //   },
+  //   {
+  //     name: "Endava",
+  //     description: "This is endava"
+  //   }
+  // ];
 
   return (
     <section>
-      {startups
+      {data
         .filter((startup) =>
           startup.name.toLowerCase().includes(props.filter.toLowerCase())
         )
